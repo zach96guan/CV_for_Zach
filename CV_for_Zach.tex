@@ -1,0 +1,222 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+%\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[2]{
+  %\item\small{
+  \small{
+    \textbf{#1}{: #2 \vspace{3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+%%%%%%%DIY-START
+\newcommand{\resumeItemChg}[2]{
+	\item\small{
+		\textbf{#1}{#2 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheadingSimple}[2]{
+  \vspace{-2pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeItemChgAwa}[2]{
+	\item[]\small{
+		\textbf{#1}{#2 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubItemChg}[2]{\resumeItemChg{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItemChgAwa}[2]{\resumeItemChgAwa{#1}{#2}\vspace{-4pt}}
+%%%%%%%DIY-END
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1em]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1em]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+
+\newcommand{\skillSectionStart}{\begin{itemize}[leftmargin=0pt]\vspace{-5pt}}
+\newcommand{\skillSectionEnd}{\end{itemize}\vspace{-14pt}}
+
+
+%-------------------------------------------
+\begin{document}
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%----------HEADING-----------------
+\centering{\textbf{\LARGE Zehao (Zach) Guan}} \\
+\vspace{3.5pt}
+\centering{\href{mailto:zehaog@cs.cmu.edu}{zehaog@cs.cmu.edu} $|$ (412) 641-0276}
+\\
+\centering{\href{https://www.linkedin.com/in/zach-guan/}{linkedin.com/in/zach-guan} $|$ \href{https://www.github.com/zach96guan/}{github.com/zach96guan}}
+
+
+%-----------EDUCATION-----------------
+\vspace{-10pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Carnegie Mellon University}{Pittsburgh, PA}
+      {M.S. in Artificial Intelligence and Innovation, School of Computer Science, GPA: 3.83/4.0}{May 2020}
+    \vspace{0.5pt}
+    \resumeSubheading
+      {Zhejiang University}{Hangzhou, China}
+      {B.E. in Information Engineering, School of Information and Electronic Engineering, GPA: 3.76/4.0}{Jun. 2018}
+  \resumeSubHeadingListEnd
+  
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+\skillSectionStart
+        \resumeSubItem{Coursework}
+        {Distributed Systems, Practical Data Science, Scalable Machine Learning, Natural Language Processing(TA), Deep Learning, Machine Learning, Text Mining, AI Engineering, Intro to Computer Systems, Database Systems.}
+        \newline
+		\resumeSubItem{Languages}
+		{Python(various data science libraries), Java, C/C\texttt{++}, JavaScript, SQL, Scala, Assembly.}
+		\newline
+		\resumeSubItem{Tools}
+		{Linux, Git, AWS, K8s, MySQL, MongoDB, Hive, MapReduce, HDFS, Spark, TensorFlow, PyTorch, MATLAB.}
+\skillSectionEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Walmart Labs}{Sunnyvale, CA}
+      {Machine Learning Engineer Intern, Personalization Team}{May 2019 -- Aug. 2019}
+      \resumeItemListStart
+        \vspace{1.5pt}
+        \resumeItemChg{}
+        {Designed a personalized recommender for implicit data, and developed latent factor model based collaborative filtering, including pointwise/pairwise non-negative matrix factorization and factorization machine methods.}
+        \resumeItemChg{}
+        {Aggregated million-scale Walmart.com transaction data by Hive, extracted and preprocessed raw data with PySpark.}
+        \resumeItemChg{}
+        {Visualized insights from sampled data by Tableau and utilized t-SNE and K-means to analyze latent representations.}
+        \resumeItemChg{}
+        {Applied ranking information retrieval metrics such as Hit Ratio, Mean Average Precision and Normalized Discounted Cumulative Gain in Python for graded relevance evaluation based on the customers preference.}
+      \resumeItemListEnd
+    \vspace{3pt}
+    
+    \resumeSubheading
+      {University of Michigan}{Ann Arbor, MI}
+      {Research Assistant, Electronic Engineering and Computer Science Dept.}{Jul. 2017 -- Oct. 2017}
+      \resumeItemListStart
+        \vspace{1.5pt}
+        \resumeItemChg{}
+        {Developed a prototype system integrated with wearable sensors and remote monitor display for U-M athletic swimmers.}
+        \resumeItemChg{}
+        {Assembled varied sensors, Bluetooth module and micro-controller on Arduino by C\texttt{++} to collect real-time detected biometric data, and utilized Eagle to redesign schematics and circuit layouts to improve communication efficiency.}
+        \resumeItemChg{}
+        {Designed Android App to receive transmitted data and multi-thread programs to establish synchronous connections.}
+      \resumeItemListEnd
+    \vspace{3pt}
+      
+    \resumeSubheading
+      {Nokia Siemens Networks Co., Ltd.}{Hangzhou, China}
+      {Software Engineer Intern}{Aug. 2016 -- Nov. 2016}
+      \resumeItemListStart
+        \vspace{1.5pt}
+        \resumeItemChg{}
+        {Implemented image processing, segmentation and feature extraction by OpenCV in Python, and applied CNNs based model to build a human face recognition system in TensorFlow.}
+        \resumeItemChg{}
+        {Embedded the framework in Raspberry Pi with JSON-based front-end display interface to complete a human-machine interactive demo, which is capable of pushing customized information of recognized targets.}
+        \resumeItemChg{}
+        {Created an open source platform for mobile development on IoT and succeeded in application for Utility Model Patent.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  
+
+%-----------PROJECTS-----------------
+\section{Selected Projects}
+  \resumeSubHeadingListStart
+      \resumeSubheadingSimple
+      {Speech-to-Text Transcription System}{\textit{\small{Feb. 2019 -- Apr. 2019}}}
+      \resumeItemListStart
+        \vspace{3pt}
+        \resumeItemChg{}
+        {Developed Attention-based deep neural networks in PyTorch, with a combination of RNNs, CNNs and Dense Nets to design an End-to-End system for speech utterance to corresponding text transcription.}
+        \resumeItemChg{}
+	    {Evaluated on WSJ dataset with the Levenshtein distance and perplexity, and ranked top 5\% on Kaggle leaderboard.}
+      \resumeItemListEnd
+      \vspace{3pt}
+  
+      \resumeSubheadingSimple
+      {Question Generation \& Answering System}{\textit{\small{Sept. 2018 -- Nov. 2018}}}
+      \resumeItemListStart
+        \vspace{3pt}
+        \resumeItemChg{}
+        {Designed a Q&A system to generate/answer questions from the source of Wikipedia articles based on linguistic features.}
+        \resumeItemChg{}
+	    {Applied sentence segmentation, Porter stemming and tokenization by spaCy, parsed POS taggers and NER recognition by dependency tree, transformed declarative sentences to ranked binary/WH questions.}
+	    \resumeItemChg{}
+	    {Utilized scikit-learn to preprocess and vectorize input sentences, identified question types and coreference resolution, calculated Jaccard similarity and TF-IDF relevance to select top candidates for answering.}
+      \resumeItemListEnd
+      \vspace{3pt}
+      
+      \resumeSubheadingSimple
+      {Intro to Computer Systems Labs}{\textit{\small{May 2018 -- Aug. 2018}}}
+      \resumeItemListStart
+        \vspace{3pt}
+        \resumeItemChg{}
+        {Wrote a general-purpose cache simulator, and optimized a small matrix transpose kernel to minimize number of misses.}
+        \resumeItemChg{}
+	    {Realized a simple Unix shell that supports basic commands of job control and implemented I/O redirection.}
+	    \resumeItemChg{}
+	    {Implemented a dynamic memory allocator by designing segregated free list and manipulating bits in header/footer with LIFO and best-fit policy, to improve both space utilization and throughput.}
+	    \resumeItemChg{}
+	    {Built a concurrent HTTP proxy that caches recently accessed web objects to handle multiple client requests in parallel.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+ 	
+%%%%%%  CV ENDS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
